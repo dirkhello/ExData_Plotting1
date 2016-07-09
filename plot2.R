@@ -1,5 +1,5 @@
-################# plot1.r ####################
-# R script to create Plot1 in Week1 Assignment of Coursera Exploratory Data Analysis Course 
+################# plot2.R ####################
+# R script to create Plot2 in Week1 Assignment of Coursera Exploratory Data Analysis Course 
 rm(list = ls()) # clear workspace
 
 
@@ -12,6 +12,8 @@ x <- paste(consumption$Date, consumption$Time)
 consumption$Timestamp<-strptime(x, "%d/%m/%Y %H:%M:%S")
 
 #### Step 3: Plot  & write to PNG file
+par(mfrow=c(1,1))
+
 with(consumption, plot(Timestamp,Global_active_power, xlab="", ylab="Global Active Power (kilowatts)", type="l"))
 
      

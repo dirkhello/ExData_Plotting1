@@ -1,4 +1,4 @@
-################# plot1.r ####################
+################# plot3.R ####################
 # R script to create Plot1 in Week1 Assignment of Coursera Exploratory Data Analysis Course 
 rm(list = ls()) # clear workspace
 
@@ -12,6 +12,8 @@ x <- paste(consumption$Date, consumption$Time)
 consumption$Timestamp<-strptime(x, "%d/%m/%Y %H:%M:%S")
 
 #### Step 3: Plot & write to PNG file
+par(mfrow=c(1,1))
+
 with(consumption, plot(Timestamp,Sub_metering_1, xlab="", ylab="Energy sub metering", type="l"))
 with(consumption, lines(Timestamp,Sub_metering_2, col="red"))
 with(consumption, lines(Timestamp,Sub_metering_3, col="blue"))

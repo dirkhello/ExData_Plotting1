@@ -1,4 +1,4 @@
-################# plot1.r ####################
+################# plot1.R ####################
 # R script to create Plot1 in Week1 Assignment of Coursera Exploratory Data Analysis Course 
 rm(list = ls()) # clear workspace
 
@@ -13,6 +13,7 @@ x <- paste(consumption$Date, consumption$Time)
 consumption$Timestamp<-strptime(x, "%d/%m/%Y %H:%M:%S")
 
 #### Step 3: Plot Histogram & write to PNG file
+par(mfrow=c(1,1))
 hist(consumption$Global_active_power,col = "red", xlab="Global Active Power (kilowatts)", ylab="Frequency", main="Global Active Power")
 dev.copy(png, file = "plot1.png")
 dev.off()

@@ -1,5 +1,5 @@
-################# plot1.r ####################
-# R script to create Plot1 in Week1 Assignment of Coursera Exploratory Data Analysis Course 
+################# plot4.r ####################
+# R script to create Plot4 in Week1 Assignment of Coursera Exploratory Data Analysis Course 
 rm(list = ls()) # clear workspace
 
 
